@@ -39,6 +39,16 @@
                 "logs:PutLogEvents"
             ],
             "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "lambda:InvokeFunction"
+            ],
+            "Resource": [
+                "arn:aws:lambda:<REGION>:<AWS_ACCOUNT_ID>:function:insert-joke-function:*",
+                "arn:aws:lambda:<REGION>:<AWS_ACCOUNT_ID>:function:insert-joke-function"
+            ]
         }
     ]
 }
